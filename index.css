@@ -1,0 +1,423 @@
+@font-face {
+  font-family: AgencyFB;
+  src: url("./Fonts/AGENCYB.woff");
+}
+@font-face {
+  font-family: Avenir;
+  src: url("./Fonts/AvenirNextLTPro-Regular.woff");
+}
+#App {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  overflow: auto;
+}
+#App-header {
+  position: sticky;
+  height: 74px;
+  width: 100%;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-color: white;
+  border-bottom: 1px solid #f3f3f3;
+  left: 0%;
+  top: 0%;
+  min-width: 700px;
+  z-index: 1000;
+  font-family: AgencyFB;
+}
+#HeaderText {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 55px;
+  text-decoration: none;
+  color: black;
+}
+
+#ProjectsHeader {
+  position: absolute;
+  right: 300px;
+  font-size: 30px;
+  color: rgb(194, 194, 194);
+  height: 60%;
+  bottom: -1px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+#AboutMeHeader {
+  position: absolute;
+  right: 200px;
+  color: rgb(194, 194, 194);
+  font-size: 30px;
+  margin-top: 20px;
+  height: 60%;
+  bottom: -1px;
+  cursor: pointer;
+}
+#ContactHeader {
+  position: absolute;
+  right: 75px;
+  color: rgb(194, 194, 194);
+  font-size: 30px;
+  margin-top: 20px;
+  height: 60%;
+  bottom: -1px;
+  cursor: pointer;
+}
+.BlueNavLine {
+  border-bottom: 1px solid #6eebd4;
+}
+.App-footer {
+  position: relative;
+  bottom: 0%;
+  width: 100%;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-color: #7b9792;
+  min-width: 1100px;
+  height: 60px;
+  z-index: 100;
+}
+
+.arrow-right {
+  position: absolute;
+  border-style: none;
+  top: 40px;
+  left: 30%;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+
+  border-left: 30px solid red;
+  border-right: none;
+  border-radius: 5%;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  outline: none;
+  box-shadow: 0 9px #999;
+}
+
+.arrow-left {
+  position: absolute;
+  border-style: none;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  top: 40px;
+  left: 5%;
+  border-right: 30px solid red;
+  border-radius: 5%;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border-left: none;
+  outline: none;
+  box-shadow: 0 9px #999;
+}
+
+.arrow-left:hover {
+  border-right-color: darkred;
+}
+.arrow-right:hover {
+  border-left-color: darkred;
+}
+
+.arrow-left:active {
+  background-color: #222;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.arrow-right:active {
+  background-color: #222;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.ButtonsHolder {
+  position: absolute;
+  right: 5%;
+  height: 100%;
+  width: 300px;
+}
+#Projects {
+  position: relative;
+  width: 100%;
+  min-height: calc(100% - 75px - 60px);
+  min-width: 1100px;
+  left: 0%;
+  top: 0%;
+  background-color: white;
+}
+
+.SingleProject {
+  cursor: pointer;
+  width: 30%;
+  margin-top: 5%;
+  margin-left: 2.5%;
+  display: inline-block;
+  max-height: 100%;
+  font-family: Avenir;
+}
+.SingleProject:hover {
+  opacity: 0.75;
+}
+
+.ProjectImage {
+  width: 100%;
+  height: 70%;
+  margin: 10px auto;
+}
+.ProjectName {
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+}
+.ProjectMadeWith {
+  color: #869f9b;
+}
+
+.ImageResize {
+  width: calc(100% - 20px);
+  height: auto;
+  vertical-align: middle;
+  border: 10px solid #e5eae9;
+  border-radius: 5px;
+}
+.ImageResizeTaller {
+  position: relative;
+  width: auto;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.SingleProjectTitleAndDescription {
+  position: relative;
+  left: 4%;
+  top: 5%;
+  word-wrap: normal;
+  width: 44%;
+  overflow: auto;
+}
+.SingleProjectTitle {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 10%;
+}
+.SingleProjectMadeWith {
+  margin-top: 10%;
+  font-size: 25px;
+}
+.SingleProjectDescription {
+  margin-top: 5%;
+  font-size: 2.5vmin;
+  margin-bottom: 5%;
+}
+
+.SingleProjectImages {
+  position: absolute;
+  right: 4%;
+  top: 5%;
+  width: 44%;
+  height: 80%;
+}
+#SingleProjectImageMaximized {
+  position: relative;
+  width: 100%;
+  left: 0%;
+  top: 0%;
+}
+.SingleProjectImageDots {
+  text-align: center;
+}
+.Dot {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  margin: 10px 20px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.Dot:hover {
+  background-color: #3b3b3b;
+}
+.ActiveDot {
+  background-color: #3b3b3b;
+}
+.PreviousArrow {
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+  top: 40%;
+  height: 70px;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  color: white;
+  text-align: center;
+}
+.NextArrow {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  height: 70px;
+  width: 40px;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  color: white;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+.PreviousArrow:hover {
+  background-color: rgb(34, 34, 34);
+}
+.NextArrow:hover {
+  background-color: rgb(34, 34, 34);
+}
+
+.ContactHeading {
+  position: absolute;
+  width: 30%;
+  text-align: center;
+  left: 35%;
+  top: 10%;
+  font-size: 50px;
+  font-family: Avenir;
+}
+.ContactOpeningText {
+  position: absolute;
+  width: 60%;
+  text-align: center;
+  left: 20%;
+  top: 20%;
+  font-size: 20px;
+  font-family: Avenir;
+}
+
+.ContactForm {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  height: 500px;
+  top: 30%;
+}
+.ContactName {
+  font-size: 24px;
+  font-family: Avenir;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+}
+.ContactEmail {
+  font-size: 24px;
+  font-family: Avenir;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  top: 20%;
+}
+.ContactMessage {
+  font-size: 24px;
+  font-family: Avenir;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 40%;
+}
+.ContactSubmit {
+  position: absolute;
+  width: 20%;
+  left: 40%;
+  height: 7.5%;
+  top: 91.25%;
+  font-family: Avenir;
+  font-size: 20px;
+  background-color: rgb(35, 35, 35);
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
+.ContactLabel {
+  position: absolute;
+  left: 15%;
+}
+.ContactText {
+  position: absolute;
+  left: 15%;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 70%;
+  height: 30%;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.ContactMessageText {
+  position: absolute;
+  left: 15%;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 70%;
+  height: 70%;
+  margin-top: 10px;
+  resize: none;
+  font-size: 20px;
+  border-width: 2px;
+}
+.FooterCopyright {
+  position: absolute;
+  height: 50%;
+  top: 25%;
+  text-align: center;
+  width: 20%;
+  left: 40%;
+  font-size: 20px;
+}
+.FooterGithubLink {
+  position: absolute;
+  width: 30px;
+  right: 75px;
+  height: 50%;
+  top: 25%;
+  text-align: center;
+}
+.FooterGithubLink a:visited {
+  text-decoration: none;
+  color: white;
+}
+.FooterLinkedInLink {
+  position: absolute;
+  width: 30px;
+  right: 25px;
+  height: 50%;
+  top: 25%;
+  text-align: center;
+}
+.FooterLinkedInLink a:visited {
+  text-decoration: none;
+  color: white;
+}
+.EmptySpace {
+  height: 50px;
+}
+@media screen and (max-width: 1210px) {
+  .SingleProject {
+    width: 50%;
+
+    margin-top: 5%;
+    margin-left: 25%;
+    display: block;
+    max-height: 100%;
+  }
+}

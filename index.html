@@ -1,7 +1,259 @@
-# DakotaHall.github.io
 <!DOCTYPE html>
 <html>
   <head>
-    <h1>hi</h1>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="index.css" rel="stylesheet" />
+    <title>Dakota Hall</title>
   </head>
+  <body>
+    <div id="App">
+      <header id="App-header">
+        <a id="HeaderText" href="/">
+          DBH
+        </a>
+        <div
+          id="ProjectsHeader"
+          class="BlueNavLine"
+          onclick="changeHeaderSelected('Projects')"
+        >
+          Projects
+        </div>
+        <div id="AboutMeHeader" onclick="changeHeaderSelected('About')">
+          About
+        </div>
+        <div id="ContactHeader" onclick="changeHeaderSelected('Contact')">
+          Contact
+        </div>
+      </header>
+      <div id="Projects">
+        <div class="SingleProject" onclick="changeProjectSelected('Twopple')">
+          <div class="ProjectImage">
+            <img
+              class="ImageResize"
+              src="./images/TwoppleHomePage2.PNG"
+              alt="Twopple"
+            />
+          </div>
+          <div class="ProjectName">
+            Twopple
+            <hr />
+            <span class="ProjectMadeWith">Unity, C#</span>
+          </div>
+        </div>
+        <div class="SingleProject" onclick="changeProjectSelected('DMKit')">
+          <div class="ProjectImage">
+            <img
+              class="ImageResize"
+              src="./images/DMKitHome2.PNG"
+              alt="DMKit"
+            />
+          </div>
+          <div class="ProjectName">
+            DMKit
+            <hr />
+            <span class="ProjectMadeWith">HTML, CSS, MERN stack</span>
+          </div>
+        </div>
+        <div class="SingleProject" onclick="changeProjectSelected('Violocity')">
+          <div class="ProjectImage">
+            <img
+              class="ImageResize"
+              src="./images/ViolocityScreenShot11.PNG"
+              alt="Violocity"
+            />
+          </div>
+          <div class="ProjectName">
+            Violocity
+            <hr />
+            <span class="ProjectMadeWith">JavaScript, Phaser CE</span>
+          </div>
+        </div>
+        <div class="EmptySpace"></div>
+      </div>
+      <div class="App-footer">
+        <div class="FooterCopyright">
+          &copy; 2019 Dakota Hall
+        </div>
+        <div class="FooterGithubLink">
+          <a href="https://github.com/DakotaHall">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <div class="FooterLinkedInLink">
+          <a href="https://www.linkedin.com/in/dakota-hall-358520155/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var slideshowIndex = 1;
+      function changeHeaderSelected(headerSelected) {
+        var projectSelected = document.getElementById("ProjectsHeader");
+        var aboutSelected = document.getElementById("AboutMeHeader");
+        var contactSelected = document.getElementById("ContactHeader");
+        var content = document.getElementById("Projects");
+        if (headerSelected === "Projects") {
+          content.innerHTML =
+            "<div class='SingleProject' onclick='changeProjectSelected(\"Twopple\")'><div class='ProjectImage'><img class='ImageResize' src='./images/TwoppleHomePage2.PNG' alt='Twopple' /> </div> <div class='ProjectName'> Twopple <hr /> <span class='ProjectMadeWith'>Unity, C#</span></div></div><div class='SingleProject' onclick='changeProjectSelected(\"DMKit\")'><div class='ProjectImage'><img class='ImageResize' src='./images/DMKitHome2.PNG' alt='DMKit' /></div><div class='ProjectName'>DMKit<hr /><span class='ProjectMadeWith'>HTML, CSS, MERN stack</span></div></div><div class='SingleProject' onclick='changeProjectSelected(\"Violocity\")'><div class='ProjectImage'><img class='ImageResize' src='./images/ViolocityScreenShot11.PNG' alt='Violocity' /> </div> <div class='ProjectName'>Violocity<hr /><span class='ProjectMadeWith'>JavaScript, Phaser CE</span></div></div><div class='EmptySpace'></div>";
+
+          projectSelected.classList.add("BlueNavLine");
+          aboutSelected.classList.remove("BlueNavLine");
+          contactSelected.classList.remove("BlueNavLine");
+        } else if (headerSelected === "About") {
+          content.innerHTML =
+            "<div class='SingleProjectTitleAndDescription'><div class='SingleProjectTitle'>Dakota Hall</div><div class='SingleProjectDescription'>I am a Mississippi State University graduate with a Bachelor's degree in computer science. I am constantly working on new projects in order to not only bring my visions into the world, but also to increase my programming knowledge. I am passionate about bringing stories to life, teaching others important lessons, and providing others with joyful experiences, so it is natural that I mostly gravitate towards game development. Through my personal projects, I have gained proficiency with: Unity, Phaser, Javascript, HTML, CSS, React, Node.js, MongoDB, Express.js, Visual Studio Code. I have also been exposed to programming in C during my university experience.</div></div><div class='SingleProjectImages'><div class='SingleProjectImageMaximized'><img class='ImageResizeTaller' alt='' src='./images/PictureOfMe.jpg' /></div></div>";
+
+          projectSelected.classList.remove("BlueNavLine");
+          aboutSelected.classList.add("BlueNavLine");
+          contactSelected.classList.remove("BlueNavLine");
+        } else if (headerSelected === "Contact") {
+          content.innerHTML =
+            "<div class='ContactHeading'>Contact</div><div class='ContactOpeningText'>Have a question or interested in working together? Feel free to checkout my <a href='https://www.linkedin.com/in/dakota-hall-358520155/'>LinkedIn</a> and <a href='https://github.com/DakotaHall'>GitHub</a>, or send me an email down below!</div><form class='ContactForm' action='mailto:dakotablakehall5@gmail.com' method='post' encType='text/plain'><div class='ContactName'><label class='ContactLabel' htmlFor='name'>Name *</label><br /><input class='ContactText' type='text' name='name'></input></div><div class='ContactEmail'><label class='ContactLabel' htmlFor='mail'>E-mail *</label><br /><input class='ContactText' type='text' name='mail'></input></div><div class='ContactMessage'><label class='ContactLabel' htmlFor='message'>Message *</label><br /><textarea class='ContactMessageText' name='message' size='50'></textarea></div><input class='ContactSubmit' type='submit' value='Submit'></input></form>";
+
+          projectSelected.classList.remove("BlueNavLine");
+          aboutSelected.classList.remove("BlueNavLine");
+          contactSelected.classList.add("BlueNavLine");
+        }
+      }
+      function changeProjectSelected(projectSelected) {
+        var projectContent = document.getElementById("Projects");
+        if (projectSelected === "Twopple") {
+          projectContent.innerHTML =
+            "<div class='SingleProjectTitleAndDescription'><div class='SingleProjectTitle'>Twopple</div><div class='SingleProjectMadeWith'>Made With: Unity, C#</div><div class='SingleProjectDescription'>Twopple is a 2D puzzle-platformer game created using Unity. The player must navigate through various levels and environments on a mission to get Twopple back home. Each level will have a variety of mechanics, but the core mechanic, drawing lines of ice, will remain vital throughout the game. This ability can be used to create platforms for Twopple, to prevent objects from moving, to direct objects already in motion, and many more functions the player will discover throughout the game. </div> </div> <div class='SingleProjectImages'> <div id='SingleProjectImageMaximized'><iframe title='Twopple Demo' width='100%' height='500px' src='https://www.youtube.com/embed/hUF5zVZd-Y0' frameBorder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"Twopple\")'href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"Twopple\")' href=''>&#10095;</button></div><div class='SingleProjectImageDots'><span class='Dot ActiveDot' onclick='changeActiveImage(1,\"Twopple\")'></span><span class='Dot' onclick='changeActiveImage(2,\"Twopple\")'></span><span class='Dot' onclick='changeActiveImage(3,\"Twopple\")'></span><span class='Dot' onclick='changeActiveImage(4,\"Twopple\")'></span></div></div>";
+        } else if (projectSelected === "DMKit") {
+          projectContent.innerHTML =
+            "<div class='SingleProjectTitleAndDescription'><div class='SingleProjectTitle'>DMKit</div><div class='SingleProjectMadeWith'>Made With: HTML, CSS, MERN stack</div><div class='SingleProjectDescription'>DMKit is a website created to help DM Dungeons and Dragons. This tool not only streamlines the more cumbersome efforts that go into being a Dungeon Master, but it is also accessible regardless of the user's knowledge of the game. This website helps DMs manage six aspects of DMing: characters, monsters, NPCs, encounters, settlements, and quests. Made with the MERN (MongoDB, Express, React (with Redux), Node.js) stack, DMKit is a tool any DM would be elated to have in his or her toolbox. Click on the following link to visit the website: <a href='https://damp-stream-34255.herokuapp.com/'>DMKit</a> </div> </div> <div class='SingleProjectImages'> <div id='SingleProjectImageMaximized'><img class='ImageResize' alt='' src='./images/DMKitHome2.PNG'></img><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"DMKit\")' href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"DMKit\")'href=''>&#10095;</button></div><div class='SingleProjectImageDots'><span class='Dot ActiveDot' onclick='changeActiveImage(1,\"DMKit\")'></span><span class='Dot' onclick='changeActiveImage(2,\"DMKit\")'></span><span class='Dot' onclick='changeActiveImage(3,\"DMKit\")'></span><span class='Dot' onclick='changeActiveImage(4,\"DMKit\")'></span></div></div>";
+        } else if (projectSelected === "Violocity") {
+          projectContent.innerHTML =
+            "<div class='SingleProjectTitleAndDescription'><div class='SingleProjectTitle'>Violocity</div><div class='SingleProjectMadeWith'>Made With: JavaScript, Phaser CE</div><div class='SingleProjectDescription'>Violocity is a mobile game where the player must maneuver around obstacles while the stage continuously gets faster until the  player loses. To dodge the obstacles, the player must swipe to adjust the X and Y velocity of the yellow rectangle. The further the X and Y values get from 0, whether it be in the negative or positive direction, the more colorful the obstacles will become. The X velocity controls how blue the obstacles are, while the Y velocity controls how red they are. When the player has no velocity in either direction, the obstacles are black. If the velocity is maximum or minimum in both the X and Y directions, the obstacles will be a shade of violet. The game has two difficulties, with a steep increase in challenge when transitioning from \"Normal\" to \"Hard\". There are also powerups that players can get if they make it far enough in the level. If you want to check out Violocity on the Google Play Store, click here: <a href='https://play.google.com/store/apps/details?id=com.dakotablakehall.violocity'>Violocity</a></div> </div> <div class='SingleProjectImages'> <div id='SingleProjectImageMaximized'><img class='ImageResize' alt='' src='./images/ViolocityScreenShot11.PNG'></img><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"Violocity\")' href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"Violocity\")' href=''>&#10095;</button><button </div><div class='SingleProjectImageDots'><span class='Dot ActiveDot' onclick='changeActiveImage(1,\"Violocity\")'></span><span class='Dot' onclick='changeActiveImage(2,\"Violocity\")'></span><span class='Dot' onclick='changeActiveImage(3,\"Violocity\")'></span><span class='Dot' onclick='changeActiveImage(4,\"Violocity\")'></span></div></div>";
+        }
+      }
+
+      function changeActiveImage(imageNumber, projectName) {
+        console.log("changeActiveImageCalled");
+        var images = document.getElementsByClassName("Dot");
+        slideshowIndex = imageNumber;
+        if (slideshowIndex === 1) {
+          if (projectName === "Twopple") {
+            var twoppleImage = document.getElementById(
+              "SingleProjectImageMaximized"
+            );
+            twoppleImage.innerHTML =
+              "<iframe title='Twopple Demo' width='100%' height='500px' src='https://www.youtube.com/embed/hUF5zVZd-Y0' frameBorder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"Twopple\")'href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"Twopple\")' href=''>&#10095;</button>";
+          } else if (projectName === "DMKit") {
+            var dmkitImage = document.getElementById(
+              "SingleProjectImageMaximized"
+            );
+            dmkitImage.innerHTML =
+              "<img class='ImageResize' alt='' src='./images/DMKitHome2.PNG'></img><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"DMKit\")' href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"DMKit\")' href=''>&#10095;</button>";
+          } else if (projectName === "Violocity") {
+            var violocityImage = document.getElementById(
+              "SingleProjectImageMaximized"
+            );
+            violocityImage.innerHTML =
+              "<img class='ImageResize' alt='' src='./images/ViolocityScreenShot11.PNG'></img><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"Violocity\")' href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"Violocity\")' href=''>&#10095;</button>";
+          }
+
+          images[0].classList.add("ActiveDot");
+          images[1].classList.remove("ActiveDot");
+          images[2].classList.remove("ActiveDot");
+          images[3].classList.remove("ActiveDot");
+        } else if (slideshowIndex === 2) {
+          if (projectName === "Twopple") {
+            var twoppleImage = document.getElementById(
+              "SingleProjectImageMaximized"
+            );
+            twoppleImage.innerHTML =
+              "<img class='ImageResize' alt='' src='./images/TwoppleMidairRampDay2.PNG'></img><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"Twopple\")' href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"Twopple\")' href=''>&#10095;</button>";
+          } else if (projectName === "DMKit") {
+            var dmkitImage = document.getElementById(
+              "SingleProjectImageMaximized"
+            );
+            dmkitImage.innerHTML =
+              "<img class='ImageResize' alt='' src='./images/DMKitCreateCharacter2.PNG'></img><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"DMKit\")' href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"DMKit\")' href=''>&#10095;</button>";
+          } else if (projectName === "Violocity") {
+            var violocityImage = document.getElementById(
+              "SingleProjectImageMaximized"
+            );
+            violocityImage.innerHTML =
+              "<img class='ImageResize' alt='' src='./images/ViolocityScreenShot12.PNG'></img><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"Violocity\")' href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"Violocity\")' href=''>&#10095;</button>";
+          }
+          images[0].classList.remove("ActiveDot");
+          images[1].classList.add("ActiveDot");
+          images[2].classList.remove("ActiveDot");
+          images[3].classList.remove("ActiveDot");
+        } else if (slideshowIndex === 3) {
+          if (projectName === "Twopple") {
+            var twoppleImage = document.getElementById(
+              "SingleProjectImageMaximized"
+            );
+            twoppleImage.innerHTML =
+              "<img class='ImageResize' alt='' src='./images/TwopplePenguinColonyNight2.PNG'></img><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"Twopple\")' href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"Twopple\")' href=''>&#10095;</button>";
+          } else if (projectName === "DMKit") {
+            var dmkitImage = document.getElementById(
+              "SingleProjectImageMaximized"
+            );
+            dmkitImage.innerHTML =
+              "<img class='ImageResize' alt='' src='./images/DMKitEncounter2.PNG'></img><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"DMKit\")'href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"DMKit\")' href=''>&#10095;</button>";
+          } else if (projectName === "Violocity") {
+            var violocityImage = document.getElementById(
+              "SingleProjectImageMaximized"
+            );
+            violocityImage.innerHTML =
+              "<img class='ImageResize' alt='' src='./images/ViolocityScreenShot13.PNG'></img><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"Violocity\")' href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"Violocity\")' href=''>&#10095;</button>";
+          }
+          images[0].classList.remove("ActiveDot");
+          images[1].classList.remove("ActiveDot");
+          images[2].classList.add("ActiveDot");
+          images[3].classList.remove("ActiveDot");
+        } else if (slideshowIndex === 4) {
+          if (projectName === "Twopple") {
+            var twoppleImage = document.getElementById(
+              "SingleProjectImageMaximized"
+            );
+            twoppleImage.innerHTML =
+              "<img class='ImageResize' alt='' src='./images/TwoppleStartDay2.PNG'></img><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"Twopple\")'href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"Twopple\")' href=''>&#10095;</button>";
+          } else if (projectName === "DMKit") {
+            var dmkitImage = document.getElementById(
+              "SingleProjectImageMaximized"
+            );
+            dmkitImage.innerHTML =
+              "<img class='ImageResize' alt='' src='./images/DMKitSettlement2.PNG'></img><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"DMKit\")'href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"DMKit\")' href=''>&#10095;</button>";
+          } else if (projectName === "Violocity") {
+            var violocityImage = document.getElementById(
+              "SingleProjectImageMaximized"
+            );
+            violocityImage.innerHTML =
+              "<img class='ImageResize' alt='' src='./images/ViolocityScreenShot14.PNG'></img><button class='PreviousArrow' onclick='changeSlideshowNumber(-1,\"Violocity\")' href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1,\"Violocity\")' href=''>&#10095;</button>";
+          }
+          images[0].classList.remove("ActiveDot");
+          images[1].classList.remove("ActiveDot");
+          images[2].classList.remove("ActiveDot");
+          images[3].classList.add("ActiveDot");
+        }
+      }
+
+      function changeSlideshowNumber(addOrSubtractNumber, projectName) {
+        slideshowIndex += addOrSubtractNumber;
+        if (slideshowIndex === 0) {
+          slideshowIndex = 4;
+        } else if (slideshowIndex === 5) {
+          slideshowIndex = 1;
+        }
+        changeActiveImage(slideshowIndex, projectName);
+      }
+    </script>
+  </body>
 </html>
