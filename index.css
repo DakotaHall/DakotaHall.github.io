@@ -411,6 +411,9 @@
 .EmptySpace {
   height: 50px;
 }
+.Hidden {
+  display: none;
+}
 @media screen and (max-width: 1210px) {
   .SingleProject {
     width: 50%;
