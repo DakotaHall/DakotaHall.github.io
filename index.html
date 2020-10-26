@@ -37,16 +37,16 @@
       </header>
       <div id="Projects">
         <div id="OnProjects">
-          <div class="SingleProject" onclick="changeProjectSelected('Twopple')">
+          <div class="SingleProject" onclick="changeProjectSelected('Champignon')">
             <div class="ProjectImage">
               <img
                 class="ImageResize"
-                src="./images/TwoppleHomePage2.PNG"
+                src="./images/ChampignonImage1.PNG"
                 alt="Twopple"
               />
             </div>
             <div class="ProjectName">
-              Twopple
+              Champigñon
               <hr />
               <span class="ProjectMadeWith">Unity, C#</span>
             </div>
@@ -63,6 +63,20 @@
               DMKit
               <hr />
               <span class="ProjectMadeWith">HTML, CSS, MERN stack</span>
+            </div>
+          </div>
+          <div class="SingleProject" onclick="changeProjectSelected('RewindRobert')">
+            <div class="ProjectImage">
+              <img
+                class="ImageResize"
+                src="./images/RewindRobertTitle.PNG"
+                alt="Twopple"
+              />
+            </div>
+            <div class="ProjectName">
+              Rewind Robert
+              <hr />
+              <span class="ProjectMadeWith">Unity, C#</span>
             </div>
           </div>
           <div
@@ -82,10 +96,51 @@
               <span class="ProjectMadeWith">JavaScript, Phaser CE</span>
             </div>
           </div>
+          
+          <div class="SingleProject" onclick="changeProjectSelected('3DPracticeProject')">
+            <div class="ProjectImage">
+              <img
+                class="ImageResize"
+                src="./images/HookGameImage4.PNG"
+                alt="Twopple"
+              />
+            </div>
+            <div class="ProjectName">
+              SkyHook
+              <hr />
+              <span class="ProjectMadeWith">Unity, C#</span>
+            </div>
+          </div>
+          <div class="SingleProject" onclick="changeProjectSelected('Twopple')">
+            <div class="ProjectImage">
+              <img
+                class="ImageResize"
+                src="./images/TwoppleHomePage2.PNG"
+                alt="Twopple"
+              />
+            </div>
+            <div class="ProjectName">
+              Twopple
+              <hr />
+              <span class="ProjectMadeWith">Unity, C#</span>
+            </div>
+          </div>
           <div class="EmptySpace"></div>
         </div>
         <div id="SingleProjects" class="Hidden">
-            <div class='SingleProjectTitleAndDescription'><div class='SingleProjectTitle'><div class="ProjectTitle">Twopple</div><div class="ProjectTitle">DMKit</div><div class="ProjectTitle">Violocity</div></div><div class='SingleProjectMadeWith'><div class="ProjectMadeWith2">Made With: Unity, C#</div><div class="ProjectMadeWith2">Made With: HTML, CSS, MERN stack</div><div class="ProjectMadeWith2">Made With: JavaScript, Phaser CE</div></div><div class='SingleProjectDescription'><div class="ProjectDescription">Twopple is a 2D puzzle-platformer game created using Unity. The player must navigate through various levels and environments on a mission to get Twopple back home. Each level will have a variety of mechanics, but the core mechanic, drawing lines of ice, will remain vital throughout the game. This ability can be used to create platforms for Twopple, to prevent objects from moving, to direct objects already in motion, and many more functions the player will discover throughout the game.</div><div class="ProjectDescription">DMKit is a website created to help DM Dungeons and Dragons. This tool not only streamlines the more cumbersome efforts that go into being a Dungeon Master, but it is also accessible regardless of the user's knowledge of the game. This website helps DMs manage six aspects of DMing: characters, monsters, NPCs, encounters, settlements, and quests. Made with the MERN (MongoDB, Express, React (with Redux), Node.js) stack, DMKit is a tool any DM would be elated to have in his or her toolbox. Click on the following link to visit the website: <a href='https://damp-stream-34255.herokuapp.com/'>DMKit</a></div><div class="ProjectDescription">Violocity is a mobile game where the player must maneuver around obstacles while the stage continuously gets faster until the  player loses. To dodge the obstacles, the player must swipe to adjust the X and Y velocity of the yellow rectangle. The further the X and Y values get from 0, whether it be in the negative or positive direction, the more colorful the obstacles will become. The X velocity controls how blue the obstacles are, while the Y velocity controls how red they are. When the player has no velocity in either direction, the obstacles are black. If the velocity is maximum or minimum in both the X and Y directions, the obstacles will be a shade of violet. The game has two difficulties, with a steep increase in challenge when transitioning from \"Normal\" to \"Hard\". There are also powerups that players can get if they make it far enough in the level. If you want to check out Violocity on the Google Play Store, click here: <a href='https://play.google.com/store/apps/details?id=com.dakotablakehall.violocity'>Violocity</a></div></div> </div> <div class='SingleProjectImages'> <div id='SingleProjectImageMaximized'>
+            <div class='SingleProjectTitleAndDescription'>
+              <div class='SingleProjectTitle'>
+                <div id="ProjectTitle" class="ProjectTitle"></div>
+              </div>
+              <div class='SingleProjectMadeWith'>
+                <div id="SelectedProjectMadeWith" class="ProjectMadeWith2"></div>
+              </div>
+              <div class='SingleProjectDescription'>
+                <div id="ProjectDescription" class="ProjectDescription"></div>
+              </div> 
+            </div> 
+            <div class='SingleProjectImages'> 
+              <div id='SingleProjectImageMaximized'>
             <div id="TwoppleImages" class="">
                 <div class="TwoppleImage" >
                     <iframe title='Twopple Demo' width='100%' height='500px' src='https://www.youtube.com/embed/hUF5zVZd-Y0' frameBorder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowFullScreen></iframe>
@@ -128,6 +183,48 @@
                     <img class='ImageResize' alt='' src='./images/ViolocityScreenShot14.PNG'></img>
                 </div>
             </div>
+            <div id="ChampignonImages" class="Hidden">
+              <div class="ChampignonImage" >
+                  <img class='ImageResize' alt='' src='./images/ChampignonImage1.PNG'></img>
+              </div>
+              <div class="ChampignonImage Hidden" >
+                  <img class='ImageResize' alt='' src='./images/ChampignonImage2.PNG'></img>
+              </div>
+              <div class="ChampignonImage Hidden" >
+                  <img class='ImageResize' alt='' src='./images/ChampignonImage3.PNG'></img>
+              </div>
+              <div class="ChampignonImage Hidden" >
+                  <img class='ImageResize' alt='' src='./images/ChampignonImage4.PNG'></img>
+              </div>
+          </div>
+          <div id="HookGameImages" class="Hidden">
+            <div class="HookGameImage" >
+                <img class='ImageResize' alt='' src='./images/HookGameImage1.PNG'></img>
+            </div>
+            <div class="HookGameImage Hidden" >
+                <img class='ImageResize' alt='' src='./images/HookGameImage2.PNG'></img>
+            </div>
+            <div class="HookGameImage Hidden" >
+                <img class='ImageResize' alt='' src='./images/HookGameImage3.PNG'></img>
+            </div>
+            <div class="HookGameImage Hidden" >
+                <img class='ImageResize' alt='' src='./images/HookGameImage4.PNG'></img>
+            </div>
+        </div>
+        <div id="RewindRobertImages" class="Hidden">
+          <div class="RewindRobertImage" >
+              <img class='ImageResize' alt='' src='./images/RewindRobertImage1.PNG'></img>
+          </div>
+          <div class="RewindRobertImage Hidden" >
+              <img class='ImageResize' alt='' src='./images/RewindRobertImage2.PNG'></img>
+          </div>
+          <div class="RewindRobertImage Hidden" >
+              <img class='ImageResize' alt='' src='./images/RewindRobertImage3.PNG'></img>
+          </div>
+          <div class="RewindRobertImage Hidden" >
+              <img class='ImageResize' alt='' src='./images/RewindRobertImage4.PNG'></img>
+          </div>
+      </div>
             <button class='PreviousArrow' onclick='changeSlideshowNumber(-1)'href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1)' href=''>&#10095;</button></div><div class='SingleProjectImageDots'><span class='Dot ActiveDot' onclick='changeActiveImage(1)'></span><span class='Dot' onclick='changeActiveImage(2)'></span><span class='Dot' onclick='changeActiveImage(3)'></span><span class='Dot' onclick='changeActiveImage(4)'></span></div></div>
         </div>
   
@@ -164,7 +261,7 @@
       </div>
       <div class="App-footer">
         <div class="FooterCopyright">
-          &copy; 2019 Dakota Hall
+          &copy; 2020 Dakota Hall
         </div>
         <div class="FooterGithubLink">
           <a href="https://github.com/DakotaHall">
@@ -232,57 +329,78 @@
         var twoppleImages = document.getElementById("TwoppleImages");
         var dmkitImages = document.getElementById("DMKitImages");
         var violocityImages = document.getElementById("ViolocityImages");
-        var projectTitles = document.getElementsByClassName("ProjectTitle");
-        var projectMadeWiths = document.getElementsByClassName("ProjectMadeWith2");
-        var projectDescriptions = document.getElementsByClassName("ProjectDescription");
+        var champignonImages = document.getElementById("ChampignonImages");
+        var threeDPracticeImages = document.getElementById("HookGameImages");
+        var rewindRobertImages = document.getElementById("RewindRobertImages");
+        var projectTitle = document.getElementById("ProjectTitle");
+        var projectMadeWith = document.getElementById("SelectedProjectMadeWith");
+        var projectDescription = document.getElementById("ProjectDescription");
         if (projectSelected === "Twopple") {
           onProject.classList.add("Hidden");
-          
+          projectTitle.innerHTML = "Twopple";
+          projectMadeWith.innerHTML = "Made With: Unity, C#";
+          projectDescription.innerHTML = "Twopple is a 2D puzzle-platformer game created using Unity. The player must navigate through various levels and environments on a mission to get Twopple back home. Each level will have a variety of mechanics, but the core mechanic, drawing lines of ice, will remain vital throughout the game. This ability can be used to create platforms for Twopple, to prevent objects from moving, to direct objects already in motion, and many more functions the player will discover throughout the game.";
           twoppleImages.classList.remove("Hidden");
           dmkitImages.classList.add("Hidden");
           violocityImages.classList.add("Hidden");
-          projectTitles[0].classList.remove("Hidden");
-          projectTitles[1].classList.add("Hidden");
-          projectTitles[2].classList.add("Hidden");
-          projectMadeWiths[0].classList.remove("Hidden");
-          projectMadeWiths[1].classList.add("Hidden");
-          projectMadeWiths[2].classList.add("Hidden");
-          projectDescriptions[0].classList.remove("Hidden");
-          projectDescriptions[1].classList.add("Hidden");
-          projectDescriptions[2].classList.add("Hidden");
-         
+          champignonImages.classList.add("Hidden");
+          threeDPracticeImages.classList.add("Hidden");
+          rewindRobertImages.classList.add("Hidden");
         } else if (projectSelected === "DMKit") {
           onProject.classList.add("Hidden");
-         
+          projectTitle.innerHTML = "DMKit";
+          projectMadeWith.innerHTML = "Made With: HTML, CSS, MERN stack";
+          projectDescription.innerHTML = "DMKit is a website created to help DM Dungeons and Dragons. This tool not only streamlines the more cumbersome efforts that go into being a Dungeon Master, but it is also accessible regardless of the user's knowledge of the game. This website helps DMs manage six aspects of DMing: characters, monsters, NPCs, encounters, settlements, and quests. Made with the MERN (MongoDB, Express, React (with Redux), Node.js) stack, DMKit is a tool any DM would be elated to have in his or her toolbox. Click on the following link to visit the website: <a href='https://damp-stream-34255.herokuapp.com/'>DMKit</a>";
           twoppleImages.classList.add("Hidden");
           dmkitImages.classList.remove("Hidden");
           violocityImages.classList.add("Hidden");
-          projectTitles[0].classList.add("Hidden");
-          projectTitles[1].classList.remove("Hidden");
-          projectTitles[2].classList.add("Hidden");
-          projectMadeWiths[0].classList.add("Hidden");
-          projectMadeWiths[1].classList.remove("Hidden");
-          projectMadeWiths[2].classList.add("Hidden");
-          projectDescriptions[0].classList.add("Hidden");
-          projectDescriptions[1].classList.remove("Hidden");
-          projectDescriptions[2].classList.add("Hidden");
-          
+          champignonImages.classList.add("Hidden");
+          threeDPracticeImages.classList.add("Hidden");
+          rewindRobertImages.classList.add("Hidden");
         } else if (projectSelected === "Violocity") {
           onProject.classList.add("Hidden");
-          
+          projectTitle.innerHTML = "Violocity";
+          projectMadeWith.innerHTML = "Made With: JavaScript, Phaser CE";
+          projectDescription.innerHTML = "Violocity is a mobile game where the player must maneuver around obstacles while the stage continuously gets faster until the  player loses. To dodge the obstacles, the player must swipe to adjust the X and Y velocity of the yellow rectangle. The further the X and Y values get from 0, whether it be in the negative or positive direction, the more colorful the obstacles will become. The X velocity controls how blue the obstacles are, while the Y velocity controls how red they are. When the player has no velocity in either direction, the obstacles are black. If the velocity is maximum or minimum in both the X and Y directions, the obstacles will be a shade of violet. The game has two difficulties, with a steep increase in challenge when transitioning from \"Normal\" to \"Hard\". There are also powerups that players can get if they make it far enough in the level. If you want to check out Violocity on the Google Play Store, click here: <a href='https://play.google.com/store/apps/details?id=com.dakotablakehall.violocity'>Violocity</a>";
           twoppleImages.classList.add("Hidden");
           dmkitImages.classList.add("Hidden");
           violocityImages.classList.remove("Hidden");
-          projectTitles[0].classList.add("Hidden");
-          projectTitles[1].classList.add("Hidden");
-          projectTitles[2].classList.remove("Hidden");
-          projectMadeWiths[0].classList.add("Hidden");
-          projectMadeWiths[1].classList.add("Hidden");
-          projectMadeWiths[2].classList.remove("Hidden");
-          projectDescriptions[0].classList.add("Hidden");
-          projectDescriptions[1].classList.add("Hidden");
-          projectDescriptions[2].classList.remove("Hidden");
-          
+          champignonImages.classList.add("Hidden");
+          threeDPracticeImages.classList.add("Hidden");
+          rewindRobertImages.classList.add("Hidden");
+        } else if(projectSelected === "Champignon"){
+          onProject.classList.add("Hidden");
+          projectTitle.innerHTML = "Champignon";
+          projectMadeWith.innerHTML = "Made With: Unity, C#";
+          projectDescription.innerHTML = "Champigñon is an in-progress 2D multiplayer survival adventure game. Each level consists of a procedurally generated map and a dungeon, both full of enemies and resources. Each enemy uses A* pathfinding to pursue and evade the player. In addition to these behaviors, the enemies are also affected by the game's Day/Night cycle. To survive, the player(s) must fight enemies, harvest resources, and craft items. To complete a level, the player(s) must fight the boss of the level, which can be found in the level's dungeon. Playable demo coming soon.";
+          twoppleImages.classList.add("Hidden");
+          dmkitImages.classList.add("Hidden");
+          violocityImages.classList.add("Hidden");
+          champignonImages.classList.remove("Hidden");
+          threeDPracticeImages.classList.add("Hidden");
+          rewindRobertImages.classList.add("Hidden");
+        } else if(projectSelected === "3DPracticeProject"){
+          onProject.classList.add("Hidden");
+          projectTitle.innerHTML = "SkyHook";
+          projectMadeWith.innerHTML = "Made With: Unity, C#";
+          projectDescription.innerHTML = "In SkyHook, players must compete against each other to reach the goals as quickly and efficiently as possible. The key mechanics of the game involve using a grappling hook to either pull yourself towards objects or swing around them. In addition, the game includes several powerups/abilities: paralyzing bullets, portals, freezing bullets, disintegration bullets, rubber projectile ball, and shield. Each of these lets you either hinder another player or help yourself reach the goal faster than the competition. Playable demo coming soon.";
+          twoppleImages.classList.add("Hidden");
+          dmkitImages.classList.add("Hidden");
+          violocityImages.classList.add("Hidden");
+          champignonImages.classList.add("Hidden");
+          threeDPracticeImages.classList.remove("Hidden");
+          rewindRobertImages.classList.add("Hidden");
+        }else if(projectSelected === "RewindRobert"){
+          onProject.classList.add("Hidden");
+          projectTitle.innerHTML = "Rewind Robert";
+          projectMadeWith.innerHTML = "Made With: Unity, C#";
+          projectDescription.innerHTML = "Rewind Robert is a 2D Puzzle Platformer created for the Brackeys Game Jam 2020.2. The game features puzzles that must be solved using various combinations of the game's three core abilities: rewinding time, freezing objects, and fast forwarding. You can play the game at: <a href='https://dakotahall.itch.io/rewind-robert'>Rewind Robert</a>";
+          twoppleImages.classList.add("Hidden");
+          dmkitImages.classList.add("Hidden");
+          violocityImages.classList.add("Hidden");
+          champignonImages.classList.add("Hidden");
+          threeDPracticeImages.classList.add("Hidden");
+          rewindRobertImages.classList.remove("Hidden");
         }
       }
 
@@ -291,6 +409,9 @@
         var twoppleImages = document.getElementsByClassName("TwoppleImage");
         var dmkitImages = document.getElementsByClassName("DMKitImage");
         var violocityImages = document.getElementsByClassName("ViolocityImage");
+        var champignonImages = document.getElementsByClassName("ChampignonImage");
+        var threeDPracticeImages = document.getElementsByClassName("HookGameImage");
+        var rewindRobertImages = document.getElementsByClassName("RewindRobertImage");
         slideshowIndex = imageNumber;
         if (slideshowIndex === 1) {
           
@@ -308,6 +429,21 @@
             violocityImages[1].classList.add("Hidden");
             violocityImages[2].classList.add("Hidden");
             violocityImages[3].classList.add("Hidden");
+            
+            champignonImages[0].classList.remove("Hidden");
+            champignonImages[1].classList.add("Hidden");
+            champignonImages[2].classList.add("Hidden");
+            champignonImages[3].classList.add("Hidden");
+
+            threeDPracticeImages[0].classList.remove("Hidden");
+            threeDPracticeImages[1].classList.add("Hidden");
+            threeDPracticeImages[2].classList.add("Hidden");
+            threeDPracticeImages[3].classList.add("Hidden");
+
+            rewindRobertImages[0].classList.remove("Hidden");
+            rewindRobertImages[1].classList.add("Hidden");
+            rewindRobertImages[2].classList.add("Hidden");
+            rewindRobertImages[3].classList.add("Hidden");
           
          
           dots[0].classList.add("ActiveDot");
@@ -330,6 +466,21 @@
             violocityImages[1].classList.remove("Hidden");
             violocityImages[2].classList.add("Hidden");
             violocityImages[3].classList.add("Hidden");
+
+           champignonImages[0].classList.add("Hidden");
+           champignonImages[1].classList.remove("Hidden");
+           champignonImages[2].classList.add("Hidden");
+           champignonImages[3].classList.add("Hidden");
+           
+           threeDPracticeImages[0].classList.add("Hidden");
+           threeDPracticeImages[1].classList.remove("Hidden");
+           threeDPracticeImages[2].classList.add("Hidden");
+           threeDPracticeImages[3].classList.add("Hidden");
+
+           rewindRobertImages[0].classList.add("Hidden");
+           rewindRobertImages[1].classList.remove("Hidden");
+           rewindRobertImages[2].classList.add("Hidden");
+           rewindRobertImages[3].classList.add("Hidden");
           
          
           dots[0].classList.remove("ActiveDot");
@@ -352,6 +503,21 @@
             violocityImages[1].classList.add("Hidden");
             violocityImages[2].classList.remove("Hidden");
             violocityImages[3].classList.add("Hidden");
+
+            champignonImages[0].classList.add("Hidden");
+            champignonImages[1].classList.add("Hidden");
+            champignonImages[2].classList.remove("Hidden");
+            champignonImages[3].classList.add("Hidden");
+
+            threeDPracticeImages[0].classList.add("Hidden");
+            threeDPracticeImages[1].classList.add("Hidden");
+            threeDPracticeImages[2].classList.remove("Hidden");
+            threeDPracticeImages[3].classList.add("Hidden");
+
+            rewindRobertImages[0].classList.add("Hidden");
+            rewindRobertImages[1].classList.add("Hidden");
+            rewindRobertImages[2].classList.remove("Hidden");
+            rewindRobertImages[3].classList.add("Hidden");
           
          
           dots[0].classList.remove("ActiveDot");
@@ -374,7 +540,21 @@
             violocityImages[1].classList.add("Hidden");
             violocityImages[2].classList.add("Hidden");
             violocityImages[3].classList.remove("Hidden");
-          
+
+            champignonImages[0].classList.add("Hidden");
+            champignonImages[1].classList.add("Hidden");
+            champignonImages[2].classList.add("Hidden");
+            champignonImages[3].classList.remove("Hidden");
+
+            threeDPracticeImages[0].classList.add("Hidden");
+            threeDPracticeImages[1].classList.add("Hidden");
+            threeDPracticeImages[2].classList.add("Hidden");
+            threeDPracticeImages[3].classList.remove("Hidden");
+
+            rewindRobertImages[0].classList.add("Hidden");
+            rewindRobertImages[1].classList.add("Hidden");
+            rewindRobertImages[2].classList.add("Hidden");
+            rewindRobertImages[3].classList.remove("Hidden");
          
           dots[0].classList.remove("ActiveDot");
           dots[1].classList.remove("ActiveDot");
