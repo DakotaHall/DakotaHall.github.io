@@ -35,8 +35,51 @@
           Contact
         </div>
       </header>
+      
       <div id="Projects">
         <div id="OnProjects">
+          <div class="SingleProject" onclick="changeProjectSelected('MonMon')">
+            <div class="ProjectImage">
+              <img
+                class="ImageResize"
+                src="./images/MonMonImage1.png"
+                alt="MonMon"
+              />
+            </div>
+            <div class="ProjectName">
+              MonMon
+              <hr />
+              <span class="ProjectMadeWith">Unity, C#</span>
+            </div>
+          </div>
+          <div class="SingleProject" onclick="changeProjectSelected('ReTank')">
+            <div class="ProjectImage">
+              <img
+                class="ImageResize"
+                src="./images/ReTankImage1.PNG"
+                alt="ReTank"
+              />
+            </div>
+            <div class="ProjectName">
+              Re:Tank
+              <hr />
+              <span class="ProjectMadeWith">Unity, C#</span>
+            </div>
+          </div>
+          <div class="SingleProject" onclick="changeProjectSelected('ChargeChamps')">
+            <div class="ProjectImage">
+              <img
+                class="ImageResize"
+                src="./images/ChargeChampsImage1.png"
+                alt="ChargeChamps"
+              />
+            </div>
+            <div class="ProjectName">
+              Charge Champs
+              <hr />
+              <span class="ProjectMadeWith">Unity, C#</span>
+            </div>
+          </div>
           <div class="SingleProject" onclick="changeProjectSelected('Champignon')">
             <div class="ProjectImage">
               <img
@@ -224,6 +267,49 @@
           <div class="RewindRobertImage Hidden" >
               <img class='ImageResize' alt='' src='./images/RewindRobertImage4.PNG'></img>
           </div>
+         
+    </div>
+    <div id="MonMonImages" class="Hidden">
+      <div class="MonMonImage" >
+          <img class='ImageResize' alt='' src='./images/MonMonImage1.PNG'></img>
+      </div>
+      <div class="MonMonImage Hidden" >
+          <img class='ImageResize' alt='' src='./images/MonMonImage2.PNG'></img>
+      </div>
+      <div class="MonMonImage Hidden" >
+          <img class='ImageResize' alt='' src='./images/MonMonImage3.PNG'></img>
+      </div>
+      <div class="MonMonImage Hidden" >
+          <img class='ImageResize' alt='' src='./images/MonMonImage4.PNG'></img>
+      </div>
+  </div>
+  <div id="ReTankImages" class="Hidden">
+    <div class="ReTankImage" >
+        <img class='ImageResize' alt='' src='./images/ReTankImage1.PNG'></img>
+    </div>
+    <div class="ReTankImage Hidden" >
+        <img class='ImageResize' alt='' src='./images/ReTankImage2.PNG'></img>
+    </div>
+    <div class="ReTankImage Hidden" >
+        <img class='ImageResize' alt='' src='./images/ReTankImage3.PNG'></img>
+    </div>
+    <div class="ReTankImage Hidden" >
+        <img class='ImageResize' alt='' src='./images/ReTankImage4.PNG'></img>
+    </div>
+</div>
+<div id="ChargeChampsImages" class="Hidden">
+  <div class="ChargeChampsImage" >
+      <img class='ImageResize' alt='' src='./images/ChargeChampsImage1.PNG'></img>
+  </div>
+  <div class="ChargeChampsImage Hidden" >
+      <img class='ImageResize' alt='' src='./images/ChargeChampsImage2.PNG'></img>
+  </div>
+  <div class="ChargeChampsImage Hidden" >
+      <img class='ImageResize' alt='' src='./images/ChargeChampsImage3.PNG'></img>
+  </div>
+  <div class="ChargeChampsImage Hidden" >
+      <img class='ImageResize' alt='' src='./images/ChargeChampsImage4.PNG'></img>
+  </div>
       </div>
             <button class='PreviousArrow' onclick='changeSlideshowNumber(-1)'href=''>&#10094;</button><button class='NextArrow' onclick='changeSlideshowNumber(1)' href=''>&#10095;</button></div><div class='SingleProjectImageDots'><span class='Dot ActiveDot' onclick='changeActiveImage(1)'></span><span class='Dot' onclick='changeActiveImage(2)'></span><span class='Dot' onclick='changeActiveImage(3)'></span><span class='Dot' onclick='changeActiveImage(4)'></span></div></div>
         </div>
@@ -332,6 +418,9 @@
         var champignonImages = document.getElementById("ChampignonImages");
         var threeDPracticeImages = document.getElementById("HookGameImages");
         var rewindRobertImages = document.getElementById("RewindRobertImages");
+        var monMonImages = document.getElementById("MonMonImages");
+        var reTankImages = document.getElementById("ReTankImages");
+        var chargeChampsImages = document.getElementById("ChargeChampsImages");
         var projectTitle = document.getElementById("ProjectTitle");
         var projectMadeWith = document.getElementById("SelectedProjectMadeWith");
         var projectDescription = document.getElementById("ProjectDescription");
@@ -346,6 +435,9 @@
           champignonImages.classList.add("Hidden");
           threeDPracticeImages.classList.add("Hidden");
           rewindRobertImages.classList.add("Hidden");
+          monMonImages.classList.add("Hidden");
+          reTankImages.classList.add("Hidden");
+          chargeChampsImages.classList.add("Hidden");
         } else if (projectSelected === "DMKit") {
           onProject.classList.add("Hidden");
           projectTitle.innerHTML = "DMKit";
@@ -357,6 +449,9 @@
           champignonImages.classList.add("Hidden");
           threeDPracticeImages.classList.add("Hidden");
           rewindRobertImages.classList.add("Hidden");
+          monMonImages.classList.add("Hidden");
+          reTankImages.classList.add("Hidden");
+          chargeChampsImages.classList.add("Hidden");
         } else if (projectSelected === "Violocity") {
           onProject.classList.add("Hidden");
           projectTitle.innerHTML = "Violocity";
@@ -368,6 +463,9 @@
           champignonImages.classList.add("Hidden");
           threeDPracticeImages.classList.add("Hidden");
           rewindRobertImages.classList.add("Hidden");
+          monMonImages.classList.add("Hidden");
+          reTankImages.classList.add("Hidden");
+          chargeChampsImages.classList.add("Hidden");
         } else if(projectSelected === "Champignon"){
           onProject.classList.add("Hidden");
           projectTitle.innerHTML = "Champignon";
@@ -379,6 +477,9 @@
           champignonImages.classList.remove("Hidden");
           threeDPracticeImages.classList.add("Hidden");
           rewindRobertImages.classList.add("Hidden");
+          monMonImages.classList.add("Hidden");
+          reTankImages.classList.add("Hidden");
+          chargeChampsImages.classList.add("Hidden");
         } else if(projectSelected === "3DPracticeProject"){
           onProject.classList.add("Hidden");
           projectTitle.innerHTML = "SkyHook";
@@ -390,6 +491,9 @@
           champignonImages.classList.add("Hidden");
           threeDPracticeImages.classList.remove("Hidden");
           rewindRobertImages.classList.add("Hidden");
+          monMonImages.classList.add("Hidden");
+          reTankImages.classList.add("Hidden");
+          chargeChampsImages.classList.add("Hidden");
         }else if(projectSelected === "RewindRobert"){
           onProject.classList.add("Hidden");
           projectTitle.innerHTML = "Rewind Robert";
@@ -401,6 +505,56 @@
           champignonImages.classList.add("Hidden");
           threeDPracticeImages.classList.add("Hidden");
           rewindRobertImages.classList.remove("Hidden");
+          monMonImages.classList.add("Hidden");
+          reTankImages.classList.add("Hidden");
+          chargeChampsImages.classList.add("Hidden");
+
+        }
+        else if(projectSelected === "MonMon"){
+          onProject.classList.add("Hidden");
+          projectTitle.innerHTML = "MonMon";
+          projectMadeWith.innerHTML = "Made With: Unity, C#";
+          projectDescription.innerHTML = "MonMon is a 2D platformer adventure game created for the GitHub Game Off 2020. The game has a large focus on using the environment as its UI, with the main character's primary ability draining energy from the moon and thus directly affecting the lighting of the scene. The core gameplay of MonMon involves fighting enemies at a range using MonMon's moon beam and jumping around in various platforming challenges. All of this culminates in a final boss fight where both fighting and platforming skills are tested.MonMon was featured in GitHub's Game Off 2020 Highlights video <a href='https://youtu.be/2KRbLyISfdM?t=30'>here</a>.  You can play MonMon at: <a href='https://dakotahall.itch.io/monmon'>MonMon</a>";
+          twoppleImages.classList.add("Hidden");
+          dmkitImages.classList.add("Hidden");
+          violocityImages.classList.add("Hidden");
+          champignonImages.classList.add("Hidden");
+          threeDPracticeImages.classList.add("Hidden");
+          rewindRobertImages.classList.add("Hidden");
+          monMonImages.classList.remove("Hidden");
+          reTankImages.classList.add("Hidden");
+          chargeChampsImages.classList.add("Hidden");
+
+        }
+        else if(projectSelected === "ReTank"){
+          onProject.classList.add("Hidden");
+          projectTitle.innerHTML = "Re:Tank";
+          projectMadeWith.innerHTML = "Made With: Unity, C#";
+          projectDescription.innerHTML = "Re:Tank is a standard top down tank shooter game, but when the player's current tank is destroyed, the player takes over whatever tank dealt the killing blow. With the large numbers of enemies present, it can quickly turn into a Bullet Hell type game. Re:Tank was developed for the Wowie Jam 3.0. You can play the game at: <a href='https://dakotahall.itch.io/retank'>Re:Tank</a>";
+          twoppleImages.classList.add("Hidden");
+          dmkitImages.classList.add("Hidden");
+          violocityImages.classList.add("Hidden");
+          champignonImages.classList.add("Hidden");
+          threeDPracticeImages.classList.add("Hidden");
+          rewindRobertImages.classList.add("Hidden");
+          monMonImages.classList.add("Hidden");
+          reTankImages.classList.remove("Hidden");
+          chargeChampsImages.classList.add("Hidden");
+        }
+        else if(projectSelected === "ChargeChamps"){
+          onProject.classList.add("Hidden");
+          projectTitle.innerHTML = "Charge Champs";
+          projectMadeWith.innerHTML = "Made With: Unity, C#";
+          projectDescription.innerHTML = "Charge Champs is an endless runner created for Brackeys Game Jam 2021.1. During the game, players must swap between two characters: Gus Plus (red) and Linus Minus (blue). Whenever the player enters the magnetic field of a platform, the character will react depending on color. Red platforms will deflect the red character and attract the blue one, while blue platforms will do the opposite. The player may also collect powerups which will be boons in the attempt to reach the high score. You can play the game at: <a href='https://dakotahall.itch.io/charge-champs'>Charge Champs</a>";
+          twoppleImages.classList.add("Hidden");
+          dmkitImages.classList.add("Hidden");
+          violocityImages.classList.add("Hidden");
+          champignonImages.classList.add("Hidden");
+          threeDPracticeImages.classList.add("Hidden");
+          rewindRobertImages.classList.add("Hidden");
+          monMonImages.classList.add("Hidden");
+          reTankImages.classList.add("Hidden");
+          chargeChampsImages.classList.remove("Hidden");
         }
       }
 
@@ -412,6 +566,9 @@
         var champignonImages = document.getElementsByClassName("ChampignonImage");
         var threeDPracticeImages = document.getElementsByClassName("HookGameImage");
         var rewindRobertImages = document.getElementsByClassName("RewindRobertImage");
+        var monMonImages = document.getElementsByClassName("MonMonImage");
+        var reTankImages = document.getElementsByClassName("ReTankImage");
+        var chargeChampsImages = document.getElementsByClassName("ChargeChampsImage");
         slideshowIndex = imageNumber;
         if (slideshowIndex === 1) {
           
@@ -444,6 +601,21 @@
             rewindRobertImages[1].classList.add("Hidden");
             rewindRobertImages[2].classList.add("Hidden");
             rewindRobertImages[3].classList.add("Hidden");
+
+            monMonImages[0].classList.remove("Hidden");
+            monMonImages[1].classList.add("Hidden");
+            monMonImages[2].classList.add("Hidden");
+            monMonImages[3].classList.add("Hidden");
+
+            reTankImages[0].classList.remove("Hidden");
+            reTankImages[1].classList.add("Hidden");
+            reTankImages[2].classList.add("Hidden");
+            reTankImages[3].classList.add("Hidden");
+
+            chargeChampsImages[0].classList.remove("Hidden");
+            chargeChampsImages[1].classList.add("Hidden");
+            chargeChampsImages[2].classList.add("Hidden");
+            chargeChampsImages[3].classList.add("Hidden");
           
          
           dots[0].classList.add("ActiveDot");
@@ -481,6 +653,21 @@
            rewindRobertImages[1].classList.remove("Hidden");
            rewindRobertImages[2].classList.add("Hidden");
            rewindRobertImages[3].classList.add("Hidden");
+
+           monMonImages[0].classList.add("Hidden");
+            monMonImages[1].classList.remove("Hidden");
+            monMonImages[2].classList.add("Hidden");
+            monMonImages[3].classList.add("Hidden");
+
+            reTankImages[0].classList.add("Hidden");
+            reTankImages[1].classList.remove("Hidden");
+            reTankImages[2].classList.add("Hidden");
+            reTankImages[3].classList.add("Hidden");
+
+            chargeChampsImages[0].classList.add("Hidden");
+            chargeChampsImages[1].classList.remove("Hidden");
+            chargeChampsImages[2].classList.add("Hidden");
+            chargeChampsImages[3].classList.add("Hidden");
           
          
           dots[0].classList.remove("ActiveDot");
@@ -518,6 +705,21 @@
             rewindRobertImages[1].classList.add("Hidden");
             rewindRobertImages[2].classList.remove("Hidden");
             rewindRobertImages[3].classList.add("Hidden");
+
+            monMonImages[0].classList.add("Hidden");
+            monMonImages[1].classList.add("Hidden");
+            monMonImages[2].classList.remove("Hidden");
+            monMonImages[3].classList.add("Hidden");
+
+            reTankImages[0].classList.add("Hidden");
+            reTankImages[1].classList.add("Hidden");
+            reTankImages[2].classList.remove("Hidden");
+            reTankImages[3].classList.add("Hidden");
+
+            chargeChampsImages[0].classList.add("Hidden");
+            chargeChampsImages[1].classList.add("Hidden");
+            chargeChampsImages[2].classList.remove("Hidden");
+            chargeChampsImages[3].classList.add("Hidden");
           
          
           dots[0].classList.remove("ActiveDot");
@@ -555,6 +757,21 @@
             rewindRobertImages[1].classList.add("Hidden");
             rewindRobertImages[2].classList.add("Hidden");
             rewindRobertImages[3].classList.remove("Hidden");
+
+            monMonImages[0].classList.add("Hidden");
+            monMonImages[1].classList.add("Hidden");
+            monMonImages[2].classList.add("Hidden");
+            monMonImages[3].classList.remove("Hidden");
+
+            reTankImages[0].classList.add("Hidden");
+            reTankImages[1].classList.add("Hidden");
+            reTankImages[2].classList.add("Hidden");
+            reTankImages[3].classList.remove("Hidden");
+
+            chargeChampsImages[0].classList.add("Hidden");
+            chargeChampsImages[1].classList.add("Hidden");
+            chargeChampsImages[2].classList.add("Hidden");
+            chargeChampsImages[3].classList.remove("Hidden");
          
           dots[0].classList.remove("ActiveDot");
           dots[1].classList.remove("ActiveDot");
